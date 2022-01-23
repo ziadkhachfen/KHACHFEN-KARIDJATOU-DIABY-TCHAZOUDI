@@ -8,16 +8,16 @@ download.file(url,destfile="data1.csv")
 
 url1="https://data.enedis.fr/explore/dataset/conso-sup36-region/download/?format=csv&timezone=Africa/Lagos&lang=fr&use_labels_for_header=true&csv_separator=%3B"
 
-download.file(url1,destfile="data_inf.csv")
+download.file(url1,destfile="data_sup.csv")
 
 url2="https://data.enedis.fr/explore/dataset/conso-inf36-region/download/?format=csv&timezone=Africa/Lagos&lang=fr&use_labels_for_header=true&csv_separator=%3B"
 
-download.file(url2,destfile="data_sup.csv")
+download.file(url2,destfile="data_inf.csv")
 
 
 data1 <-  read.csv("data1.csv", sep = ";", encoding = "UTF-8")
-data_sup <- read.csv("data2.csv", sep = ";", encoding = "UTF-8")
-data_inf <- read.csv("data3.csv", sep = ";", encoding = "UTF-8")
+data_sup <- read.csv("data_inf.csv", sep = ";", encoding = "UTF-8")
+data_inf <- read.csv("data_sup.csv", sep = ";", encoding = "UTF-8")
 
 
 ### Trairement de donnnees:

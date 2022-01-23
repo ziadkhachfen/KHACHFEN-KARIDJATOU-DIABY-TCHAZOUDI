@@ -20,6 +20,11 @@ data_inf <- read.csv("data_inf.csv", sep = ";", encoding = "UTF-8")
 data_sup <- read.csv("data_sup.csv", sep = ";", encoding = "UTF-8")
 
 
+data1 <-rename(data1 , "Region" = "Région", "Filiere.de.production" = "Filière.de.production" ,"Courbe.Moyenne.n1..Wh." = "Courbe.Moyenne.n.1..Wh." ,   "Total.Energie.injecte..Wh."= "Total.énergie.injectée..Wh." ) 
+data_sup <-rename(data_sup,c("Total.Energie.soutire..Wh."= "Total.énergie.soutirée..Wh."  ,"Courbe.Moyenne.n1..Wh." = "Courbe.Moyenne.n.1..Wh." ,  "Region" = "Région",  "Secteur.activite" = "Secteur.activité" ))
+data_inf <-rename(data_inf,c( "Total.Energie.soutire..Wh." = "Total.énergie.soutirée..Wh.", "Courbe.Moyenne.n1..Wh." = "Courbe.Moyenne.n.1..Wh.", "Region"= "Région"))
+
+
 ### Trairement de donnnees:
 library(lubridate)
 data1$Horodate <- as.POSIXct(data1$Horodate, tz="UTC", "%Y-%m-%dT%H:%M:%OS")

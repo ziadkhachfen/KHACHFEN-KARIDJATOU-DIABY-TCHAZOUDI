@@ -16,8 +16,8 @@ download.file(url2,destfile="data_inf.csv")
 
 
 data1 <-  read.csv("data1.csv", sep = ";", encoding = "UTF-8")
-data_sup <- read.csv("data_inf.csv", sep = ";", encoding = "UTF-8")
-data_inf <- read.csv("data_sup.csv", sep = ";", encoding = "UTF-8")
+data_inf <- read.csv("data_inf.csv", sep = ";", encoding = "UTF-8")
+data_sup <- read.csv("data_sup.csv", sep = ";", encoding = "UTF-8")
 
 
 ### Trairement de donnnees:

@@ -15,6 +15,11 @@ url2="https://data.enedis.fr/explore/dataset/conso-inf36-region/download/?format
 download.file(url2,destfile="data_sup.csv")
 
 
+data1 <-  read.csv("data1.csv", sep = ";", encoding = "UTF-8")
+data_sup <- read.csv("data2.csv", sep = ";", encoding = "UTF-8")
+data_inf <- read.csv("data3.csv", sep = ";", encoding = "UTF-8")
+
+
 ### Trairement de donnnees:
 library(lubridate)
 data1$Horodate <- as.POSIXct(data1$Horodate, tz="UTC", "%Y-%m-%dT%H:%M:%OS")
